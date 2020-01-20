@@ -1,0 +1,17 @@
+<p>link3 works!fine</p>
+<input type="text" (keyup)="inputChange($event)"/>
+<!-- <a routerLink="/link31">subLink31</a>
+<a routerLink="/link32">subLink32</a> -->
+<ul *ngIf="data">
+    <span class="select-all btn" (click)="SelectAll()">Select All</span>
+    <span class="deselect-all btn" (click)="deselectAll()">Deselect All</span>
+    <span class="deselect-all btn" (click)="deleteselect()">Delete Selected</span>
+    <li *ngFor="let a of data;let i=index">
+        <input type="checkbox" (change)="checkchange(i)" [checked]="a.check"/>
+        <input type="text" [readonly]="!a.editstatus" class="text-flied" [value]="a.text" [ngClass]="{test: a.editstatus}"/>
+        <span *ngIf="!a.editstatus" (click)="editClicked(i);" class="edit btn">Edit</span>
+        <span *ngIf="!a.editstatus" (click)="deleteClicked(i)" class="delete btn">Delete</span>
+        <span *ngIf="a.editstatus" (click)="saveClicked(i)" class="edit btn">Save</span>
+        <span *ngIf="a.editstatus" (click)="cancelClicked(i)" class="delete btn">Cancel</span>
+    </li>
+</ul>

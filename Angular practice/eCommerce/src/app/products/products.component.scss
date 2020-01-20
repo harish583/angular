@@ -1,0 +1,54 @@
+$primary:red;
+.name{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.products{
+    margin: 0;
+    padding: 0;
+
+.product{
+    border: 1px solid;
+    list-style-type: none;
+    margin: 0;
+}
+.add-button{
+    color: $primary;
+    border: 1px solid;
+    padding: 10px;
+    min-width: 30px;
+    max-width: 100px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.trans1s{
+    transition: all 1s ease;
+}
+.add-button:hover{
+    color: white;
+    background: $primary;
+}
+.stepper-button{
+    width:100px;
+    .minus, .plus{
+        background: $primary;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+    }
+    // .minus:hover, .plus:hover{
+    //     color: $primary;
+    //     background: white;
+    // }
+    .added-value, .minus, .plus{
+        width: 33%;
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+        border:1px solid $primary;
+    }
+}
+}

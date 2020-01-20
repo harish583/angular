@@ -1,0 +1,13 @@
+<ul class="products">
+    <li *ngFor="let a of products;let i=index " class="product">
+        <div class="name">{{a.name}}</div>
+        <div class="description">{{a.desc}}</div>
+        <div class="price">Rs.{{a.price}}/-</div>
+        <div *ngIf="a.count<1" class="add-button trans1s" (click)="addProduct(i)">Add</div>
+        <div *ngIf="a.count>0" class="stepper-button">
+            <span class="minus btn trans1s" (click)="minusProduct(i)">-</span>
+            <span class="added-value btn">{{a.count}}</span>
+            <span class="plus btn trans1s" (click)="plusProduct(i)">+</span>
+        </div>
+    </li>
+</ul>
