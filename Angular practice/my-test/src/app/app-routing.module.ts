@@ -16,8 +16,8 @@ const routes: Routes = [
   {
     path:"link11", component:Link1Component,
   },
-  { path:"link2", component:Link2Component },
-  { path:"link3", component:Link3Component },
+  { path:"formvalidations", component:Link2Component },
+  { path:"todoList", component:Link3Component },
 ];
 
 @NgModule({

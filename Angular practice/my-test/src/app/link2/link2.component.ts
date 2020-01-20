@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './link2.component.html',
   styleUrls: ['./link2.component.scss']
 })
-export class Link2Component implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class Link2Component {
+  change(x){
+    console.log("ccgfvfvef......",x);
   }
 
 }

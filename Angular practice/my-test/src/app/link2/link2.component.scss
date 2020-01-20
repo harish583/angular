@@ -6,3 +6,9 @@ a{
 .active-url{
     color: green;
 }
+.form-control.ng-valid.ng-touched.ng-dirty{
+    border: 1px solid red;
+}
+.alert-danger{
+    color: red;
+}

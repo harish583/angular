@@ -1,4 +1,7 @@
-<p>link2 works!</p>
-
-<a routerLink="/link21">subLink21</a>
-<a routerLink="/link22">subLink22</a>
+<form>reactable form
+    <div class="form-group">
+        <label for="firstName">Name</label>
+        <input ngModel name="first" minlength="4" #first="ngModel"  (keyup)="change(first)" id="firstName" type="text" class="form-control" />
+        <div class="alert alert-danger" *ngIf="!first.valid">error</div>
+    </div>
+</form>
