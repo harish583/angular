@@ -10,11 +10,11 @@ export class AppComponent {
   title = 'my-test';
   constructor(private httpClient: HttpClient){}
   ngOnInit() {
-    console.log('ngOnInlit');
+    // console.log('ngOnInlit');
     const req = this.httpClient.get('https://jsonplaceholder.typicode.com/todos');
     req.subscribe((res) => {
-      console.log('........');
-      console.log(res);
+      // console.log('........');
+      // console.log(res);
     })
   }
 }

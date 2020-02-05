@@ -1,7 +1,70 @@
-<form>reactable form
+<h2>Introduction to Template-driven forms</h2>
+<div class="container">
+  <h1>Hero Form</h1>
+  <form heroForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+       required
+       minlength="10"
+       (keyup)="keyup($event)"
+        name="name">
+        TODO: remove this: {{model.name}}
+        <div *ngIf="heroForm.control">Error {{heroForm | json }}</div>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo">
+    </div>
+    <label for="power">Hero Power</label>
+    <select class="form-control" id="power" required>
+      <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+    </select>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
+
+
+<!-- <hr>
+<h2>reactable form</h2>
+<form #node>
     <div class="form-group">
         <label for="firstName">Name</label>
         <input ngModel name="first" minlength="4" #first="ngModel"  (keyup)="change(first)" id="firstName" type="text" class="form-control" />
-        <div class="alert alert-danger" *ngIf="!first.valid">error</div>
+        <div class="alert alert-danger" *ngIf="!first.valid">mandatory field</div>
+        ----{{first.value}} <span>hii</span>
+        hii
     </div>
 </form>
+<hr>
+<label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+  <p>
+    <button (click)="updateName()">Update Name</button>
+  </p>
+  <p>
+    Value: {{ name.value }}
+  </p>
+  <hr>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="name">
+    </label>
+    <div class="danger" *ngIf="!profileForm.controls.name.valid && profileForm.controls.name.touched">Errrorn in name</div>
+    <br>
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+    <br>for min 3 letters of name
+    <input type="checkbox" formControlName="checkbox"/>
+    <br>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  </form>
+   -->

@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './link4.component.html',
   styleUrls: ['./link4.component.scss']
 })
-export class Link4Component implements OnInit {
+export class Link4Component {
+  constructor(
+    public id: number,
+    public name: string,
+    public power: string,
+    public alterEgo?: string
+  ) {  }
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
 }

@@ -25,7 +25,7 @@ export class Link3Component implements OnInit {
   }
   editClicked(i){
     this.responseService.editClicked(i);
-    console.log('this.responseService.data...', this.responseService.data);
+    // console.log('this.responseService.data...', this.responseService.data);
   }
   saveClicked(i){
     // var valuee= document.querySelectorAll(".text-flied")[i].value;

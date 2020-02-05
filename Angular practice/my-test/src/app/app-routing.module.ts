@@ -7,12 +7,12 @@ import { Link3Component } from './link3/link3.component';
 
 const routes: Routes = [
   { path:"", component:HomeComponent},
-  {
-    path:"link1", component:Link1Component,
-    children: [
-      {path: 'link11', component: Link1Component}
-    ]
-  },
+  // {
+  //   path:"link1", component:Link1Component,
+  //   children: [
+  //     {path: 'link11', component: Link1Component}
+  //   ]
+  // },
   {
     path:"link11", component:Link1Component,
   },
